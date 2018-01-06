@@ -17,20 +17,17 @@ section {
 .padding-bottom-30 {
   padding-bottom: 30px;
 }
-#section1 {
+#section_landing {
   padding: 154px 0 100px;
   min-height: calc(79%);
 }
 @media (min-width: 992px) {
-  #section1 {
+  #section_landing {
     padding: 156px 0 100px;
     min-height: calc(79%);
   }
 }
-#section2,
-#section4,
-#section6,
-#section8 {
+.section-dark {
   background-color: #f0f0f0;
 }
 footer {
@@ -60,17 +57,3 @@ footer .nav > li > a:hover {
 .scroll-top a:visited {
   color: #777;
 }
-.vcenter {
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
-}
-.vertical-align {
-  display: flex;
-  align-items: center;
-}
-/*@media (min-width:1200px ) {
-  .lg-pad-top {
-      min-height:calc(100% - 1px);
-  }
-}*/
