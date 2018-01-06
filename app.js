@@ -26,7 +26,7 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-  extended: true
+    extended: true
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -67,15 +67,15 @@ app.use((err, req, res, next) => {
     });
 });
 
-// app.set('port', process.env.PORT || 3005);
-// var http = require('http').Server(app);
-// //var io = require('socket.io')(http);
+if (!app.locals.ENV_DEVELOPMENT) {
+    app.set('port', process.env.PORT || 3005);
+    var http = require('http').Server(app);
 
-// // web3socket(io);
+    http.listen(app.get('port'), '0.0.0.0', function () {
+        console.log('Express server listening on port ' + app.get('port'));
+    });
+}
 
-// http.listen(app.get('port'), '0.0.0.0', function() {
-//     console.log('Express server listening on port ' + app.get('port'));
-// });
 
 
 module.exports = app;
