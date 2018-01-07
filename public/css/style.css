@@ -21,6 +21,12 @@ section {
   padding: 154px 0 100px;
   min-height: calc(79%);
 }
+#section_resources {
+  min-height: calc(39%);
+}
+#section_community {
+  min-height: calc(34%);
+}
 @media (min-width: 992px) {
   #section_landing {
     padding: 156px 0 100px;
