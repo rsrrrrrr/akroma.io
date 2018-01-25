@@ -24,8 +24,8 @@ section {
 #section_resources {
   min-height: calc(39%);
 }
-#section_community {
-  min-height: calc(34%);
+#section_community, #section_network {
+  min-height: calc(36%);
 }
 @media (min-width: 992px) {
   #section_landing {
@@ -63,3 +63,4 @@ footer .nav > li > a:hover {
 .scroll-top a:visited {
   color: #777;
 }
+
