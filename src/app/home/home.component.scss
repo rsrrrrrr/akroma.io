@@ -1,0 +1,40 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.section-wrapper {
+  background-size: cover;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    min-height: 500px;
+    flex-direction: column;
+  }
+
+  .section-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.hero {
+    background-image: url('../../assets/images/hallway.jpg');
+    color: #fff;
+    padding-top: 120px;
+
+    .title {
+      font-size: 3.25rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+    }
+  }
+
+  &.oracles {
+    background-image: url('../../assets/images/expressway.jpg');
+    color: #fff;
+  }
+}
