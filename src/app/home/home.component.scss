@@ -20,9 +20,9 @@
   }
 
   &.hero {
-    background-image: url('../../assets/images/hallway.jpg');
+    background-image: url('../../assets/images/hallway.png');
     color: #fff;
-    padding-top: 120px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 
     .title {
       font-size: 3.25rem;
@@ -36,5 +36,6 @@
   &.oracles {
     background-image: url('../../assets/images/expressway.jpg');
     color: #fff;
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
   }
 }
