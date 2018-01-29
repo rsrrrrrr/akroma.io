@@ -33,27 +33,47 @@
     }
   }
 
+  &.subhero {
+    .container {
+      min-height: 300px;
+    }
+
+    .title {
+      margin-bottom: 30px;
+    }
+
+    background: url('../../assets/images/akroma-bg-shape.svg'), linear-gradient(225deg, #FFA600 0%, #E25D00 100%);
+    background-position: 10% 50%;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    color: #fff;
+    margin-top: -50px;
+    text-align: center;
+  }
+
+
+
   &.oracles {
     color: #fff;
     background-color: #520A47;
     clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
     display: block;
     position: relative;
-  }
 
-  // transparent background hack
-  // see https://css-tricks.com/snippets/css/transparent-background-images/
-  &.oracles::after {
-    content: "";
-    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
-    background: url('../../assets/images/expressway.jpg');
-    background-size: cover;
-    opacity: 0.5;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    z-index: -1;
+    // transparent background hack
+    // see https://css-tricks.com/snippets/css/transparent-background-images/
+    &::after {
+      content: "";
+      clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+      background: url('../../assets/images/expressway.jpg');
+      background-size: cover;
+      opacity: 0.5;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      z-index: -1;
+    }
   }
 }
