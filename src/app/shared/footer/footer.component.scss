@@ -5,4 +5,23 @@ footer {
   * {
     color: white;
   }
+
+  .col-sm {
+    text-align: left;
+  }
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+
+  li {
+    margin: 10px 0;
+    font-weight: 400;
+  }
 }

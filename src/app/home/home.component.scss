@@ -1,3 +1,6 @@
+$angle-bottom: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+$angle-top-and-bottom: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+
 :host {
   display: block;
   min-height: 100vh;
@@ -22,7 +25,7 @@
   &.hero {
     background-image: url('../../assets/images/hallway.png');
     color: #fff;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: $angle-bottom;
 
     .title {
       font-size: 3.25rem;
@@ -56,7 +59,7 @@
   &.oracles {
     color: #fff;
     background-color: #520A47;
-    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+    clip-path: $angle-top-and-bottom;
     display: block;
     position: relative;
 
@@ -64,7 +67,7 @@
     // see https://css-tricks.com/snippets/css/transparent-background-images/
     &::after {
       content: "";
-      clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+      clip-path: $angle-top-and-bottom;
       background: url('../../assets/images/expressway.jpg');
       background-size: cover;
       opacity: 0.5;
@@ -80,7 +83,7 @@
   &.network-details {
     background-image: linear-gradient(225deg, #FFA600 0%, #E25D00 100%);
     color: #fff;
-    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+    clip-path: $angle-top-and-bottom;
 
     .table-sm {
       font-size: 0.875rem;
