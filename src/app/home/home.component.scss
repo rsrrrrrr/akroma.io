@@ -45,6 +45,11 @@ $angle-top-and-bottom: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
       margin-bottom: 30px;
     }
 
+    .content {
+      font-weight: 400;
+      line-height: 1.6rem;
+    }
+
     background: url('../../assets/images/akroma-bg-shape.svg'), linear-gradient(225deg, #FFA600 0%, #E25D00 100%);
     background-position: 10% 50%;
     background-repeat: no-repeat;
@@ -101,9 +106,20 @@ $angle-top-and-bottom: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
     }
   }
 
+  &.team, &.governance, &.masternodes {
+    h1 {
+      color: #4a4a4a;
+    }
+  }
+
   &.team {
     .card {
       height: 100%;
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 1rem;
     }
   }
 }

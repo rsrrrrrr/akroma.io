@@ -1,6 +1,8 @@
 footer {
   background-size: cover;
-  background-image: url('../../../assets/images/footer.png');
+  background: url('../../../assets/images/footer-bg.svg'), linear-gradient(225deg, #3d0234 0%, #710664 100%);
+  background-position: center center;
+  background-repeat: no-repeat;
 
   * {
     color: white;
