@@ -3,3 +3,8 @@
 @import '~bootstrap/scss/bootstrap';
 // @import '~@fortawesome/fontawesome-free-webfonts/scss/fontawesome';
 @import 'fonts';
+
+a, a:hover {
+    color:#F17100;
+    text-decoration: none;
+}
