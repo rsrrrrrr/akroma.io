@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+import { CollapseModule } from 'ngx-bootstrap';
 
 import { NavigationComponent } from './navigation.component';
 
@@ -9,6 +10,9 @@ describe('NavigationComponent', () => {
   beforeEach(async(() => {
     TestBed
       .configureTestingModule({
+        imports: [
+          CollapseModule,
+        ],
         declarations: [
           NavigationComponent,
         ],
