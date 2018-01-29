@@ -1,3 +1,7 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
 $angle-bottom: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 $angle-top-and-bottom: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
 
@@ -42,7 +46,7 @@ $angle-top-and-bottom: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
     }
 
     .title {
-      margin-bottom: 30px;
+      margin-bottom: 2rem;
     }
 
     .content {
@@ -113,13 +117,32 @@ $angle-top-and-bottom: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
   }
 
   &.team {
+    margin-bottom: 2rem;
+
     .card {
       height: 100%;
     }
 
     .card-title {
-      font-weight: 700;
       font-size: 1rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      .card-title {
+        font-size: 1.6rem;
+      }
+      .card-text {
+        font-size: 1.3rem;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      .card-title {
+        font-size: 2rem;
+      }
+      .card-text {
+        font-size: 1.5rem;
+      }
     }
   }
 }
