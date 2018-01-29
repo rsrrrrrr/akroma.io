@@ -34,8 +34,26 @@
   }
 
   &.oracles {
-    background-image: url('../../assets/images/expressway.jpg');
     color: #fff;
+    background-color: #520A47;
     clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+    display: block;
+    position: relative;
+  }
+
+  // transparent background hack
+  // see https://css-tricks.com/snippets/css/transparent-background-images/
+  &.oracles::after {
+    content: "";
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+    background: url('../../assets/images/expressway.jpg');
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
   }
 }
