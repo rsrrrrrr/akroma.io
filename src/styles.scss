@@ -1,4 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700"');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700"');
+
 @import 'variables';
 @import '~bootstrap/scss/bootstrap';
 @import 'fonts';
+
+::-webkit-input-placeholder {
+  font-weight: 300;
+}
+
+::-moz-placeholder {
+  font-weight: 300;
+}
+
+:-ms-input-placeholder {
+  font-weight: 300;
+}
+
+:-moz-placeholder {
+  font-weight: 300;
+}

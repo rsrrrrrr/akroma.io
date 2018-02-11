@@ -1,0 +1,64 @@
+<div class="blockchain-overview pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="info d-flex align-items-baseline px-2">
+          000.00
+          <span class="unit-of-measure">USD</span>
+        </div>
+        <div class="py-1 px-2 text-uppercase type">
+          AKA Price
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="info d-flex align-items-baseline px-2">
+          0.00
+          <span class="unit-of-measure">TH/s</span>
+        </div>
+        <div class="py-1 px-2 text-uppercase type">
+          Average Hashrate
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="info d-flex align-items-baseline px-2">
+          000.00
+          <span class="unit-of-measure">TH</span>
+        </div>
+        <div class="py-1 px-2 text-uppercase type">
+          Difficulty
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container content-headers">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <div class="search-wrapper">
+        <input type="text" class="form-control" placeholder="Address | Transaction Hash | Block Number">
+        <button type="button" class="btn">
+          <img src="../../../../assets/images/arrow-right.svg" alt="Right Arrow" width="27">
+        </button>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4 tab-headers order-lg-first">
+      <div class="mr-2">
+        <div class="tab-header" [class.active]="isBlocksPanelActive" role="button" (click)="setActivePanel('blocks')">Blocks</div>
+      </div>
+      <div>
+        <div class="tab-header" [class.active]="isTransactionsPanelActive" role="button" (click)="setActivePanel('transactions')">Transactions</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <ng-container *ngIf="isBlocksPanelActive; else transactionsPanel" class="container mt-3">
+    <app-blocks-panel></app-blocks-panel>
+  </ng-container>
+
+  <ng-template #transactionsPanel>
+    <app-transactions-panel></app-transactions-panel>
+  </ng-template>
+</div>

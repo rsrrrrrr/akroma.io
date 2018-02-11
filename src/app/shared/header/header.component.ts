@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isCollapsed = true;
+
+  toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed;
+  }
 }

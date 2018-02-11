@@ -1,0 +1,5 @@
+<div class="row mb-3" *ngFor="let transaction of transactions$ | async; trackBy: trackTransaction">
+  <div class="col">
+    <app-transaction-overview [transaction]="transaction"></app-transaction-overview>
+  </div>
+</div>

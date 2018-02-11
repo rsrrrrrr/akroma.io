@@ -1,0 +1,91 @@
+<div class="row-wrapper d-none d-md-block">
+  <div class="row">
+    <div class="col">
+      <div class="row-grid">
+        <div class="row-icon">
+          <img src="../../../assets/images/arrows.svg" alt="Transaction" height="46">
+        </div>
+        <div class="row-inner-grid-top">
+          <div class="hash">
+            <span class="text-truncate">
+              {{ transaction.hash }}
+            </span>
+          </div>
+          <div class="timestamp">
+            {{ transaction.timestamp | unixTimestampToDate | date:'yyyy-MM-dd HH:mm:ss' }}
+          </div>
+          <div class="value">
+            <span class="amount">
+              {{ transaction.value }}
+            </span>
+            AKA
+          </div>
+        </div>
+        <div class="row-inner-grid-bottom-wrapper">
+          <div class="row-inner-grid-bottom">
+            <div class="from">
+              <span class="text-truncate">
+                {{ transaction.from }}
+              </span>
+            </div>
+            <div class="to">
+              <span class="text-truncate">
+                {{ transaction.to }}
+              </span>
+            </div>
+          </div>
+          <span class="arrow fa-layers fa-fw">
+            <i class="fas fa-circle" style="color: #5B5B5B"></i>
+            <i class="fa-inverse fas fa-arrow-circle-right" style="color: #fff;"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row-wrapper d-md-none">
+  <div class="row">
+    <div class="col">
+      <div class="row-grid">
+        <div class="row-icon">
+          <img src="../../../assets/images/arrows.svg" alt="Transaction" height="34.5">
+        </div>
+        <div class="hash">
+          <span class="text-truncate">
+            {{ transaction.hash }}
+          </span>
+        </div>
+
+        <div class="timestamp">
+          {{ transaction.timestamp | unixTimestampToDate | date:'yyyy-MM-dd HH:mm:ss' }}
+        </div>
+        <div class="value">
+          <span class="amount">
+            {{ transaction.value }}
+          </span>
+          AKA
+        </div>
+
+        <div class="row-inner-grid-bottom-wrapper">
+          <div class="row-inner-grid-bottom">
+            <div class="from">
+              <span class="text-truncate">
+                {{ transaction.from }}
+              </span>
+            </div>
+            <div class="to">
+              <span class="text-truncate">
+                {{ transaction.to }}
+              </span>
+            </div>
+          </div>
+          <span class="arrow fa-layers fa-fw">
+            <i class="fas fa-circle" style="color: #5B5B5B"></i>
+            <i class="fa-inverse fas fa-arrow-circle-down" style="color: #fff;"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
