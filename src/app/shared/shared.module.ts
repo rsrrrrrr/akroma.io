@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { CollapseModule } from 'ngx-bootstrap';
 
 import { FooterComponent } from './footer/footer.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   imports: [
@@ -13,11 +13,11 @@ import { NavigationComponent } from './navigation/navigation.component';
     RouterModule,
   ],
   declarations: [
-    NavigationComponent,
+    HeaderComponent,
     FooterComponent,
   ],
   exports: [
-    NavigationComponent,
+    HeaderComponent,
     FooterComponent,
   ],
 })

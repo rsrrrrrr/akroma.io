@@ -10,6 +10,12 @@ $angle-top-and-bottom: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
   min-height: 100vh;
 }
 
+a,
+a:hover {
+  color: #F17100;
+  text-decoration: none;
+}
+
 .section-wrapper {
   background-size: cover;
 
@@ -27,7 +33,7 @@ $angle-top-and-bottom: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
   }
 
   &.hero {
-    background-image: url('../../assets/images/hallway.png');
+    background-image: url('../../../assets/images/hallway.png');
     color: #fff;
     clip-path: $angle-bottom;
 
@@ -58,7 +64,7 @@ $angle-top-and-bottom: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
       line-height: 1.6rem;
     }
 
-    background: url('../../assets/images/akroma-bg-shape.svg'), linear-gradient(225deg, #FFA600 0%, #E25D00 100%);
+    background: url('../../../assets/images/akroma-bg-shape.svg'), linear-gradient(225deg, #FFA600 0%, #E25D00 100%);
     background-position: 10% 50%;
     background-repeat: no-repeat;
     clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
@@ -79,7 +85,7 @@ $angle-top-and-bottom: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
     &::after {
       content: '';
       clip-path: $angle-top-and-bottom;
-      background: url('../../assets/images/expressway.jpg');
+      background: url('../../../assets/images/expressway.jpg');
       background-size: cover;
       opacity: 0.5;
       top: 0;

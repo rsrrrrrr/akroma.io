@@ -1,11 +1,11 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { CollapseModule } from 'ngx-bootstrap';
 
-import { NavigationComponent } from './navigation.component';
+import { HeaderComponent } from './header.component';
 
-describe('NavigationComponent', () => {
-  let component: NavigationComponent;
-  let fixture: ComponentFixture<NavigationComponent>;
+describe('HeaderComponent', () => {
+  let component: HeaderComponent;
+  let fixture: ComponentFixture<HeaderComponent>;
 
   beforeEach(async(() => {
     TestBed
@@ -14,14 +14,14 @@ describe('NavigationComponent', () => {
           CollapseModule,
         ],
         declarations: [
-          NavigationComponent,
+          HeaderComponent,
         ],
       })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavigationComponent);
+    fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
