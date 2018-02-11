@@ -35,12 +35,14 @@
 <div class="container content-headers">
   <div class="row">
     <div class="col-12 col-lg-8">
-      <div class="search-wrapper">
-        <input type="text" class="form-control" placeholder="Address | Transaction Hash | Block Number">
-        <button type="button" class="btn">
-          <img src="../../../../assets/images/arrow-right.svg" alt="Right Arrow" width="27">
-        </button>
-      </div>
+      <form [formGroup]="lookupForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="search-wrapper">
+          <input formControlName="lookup" type="text" class="form-control" placeholder="Address | Transaction Hash | Block Number">
+          <button type="submit" class="btn">
+            <img src="../../../../assets/images/arrow-right.svg" alt="Right Arrow" width="27">
+          </button>
+        </div>
+      </form>
     </div>
     <div class="col-12 col-lg-4 tab-headers order-lg-first">
       <div class="mr-2">
