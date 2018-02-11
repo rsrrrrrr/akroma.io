@@ -8,12 +8,15 @@ import { environment } from '../../environments/environment';
 
 import { CoreRoutingModule } from './core-routing.module';
 import { HomeComponent } from './home/home.component';
+import { NavigationEffects } from './state/effects/navigation.effects';
 import { AkromaRouterStateSerializer, reducers } from './state/reducers';
 
 @NgModule({
   imports: [
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([
+      NavigationEffects,
+    ]),
     StoreRouterConnectingModule.forRoot({
       stateKey: 'router',
     }),
@@ -24,7 +27,7 @@ import { AkromaRouterStateSerializer, reducers } from './state/reducers';
     HomeComponent,
   ],
 })
-class CoreRootModule { }
+export class CoreRootModule { }
 
 @NgModule({})
 export class CoreModule {
