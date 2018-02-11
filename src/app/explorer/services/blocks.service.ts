@@ -15,4 +15,9 @@ export class BlocksService {
     return this.http
       .get<Block[]>(`${environment.apiUrl}/blocks`);
   }
+
+  getBlock(blockNumber: number | string): Observable<Block> {
+    return this.http
+      .get<Block>(`${environment.apiUrl}/blocks/${blockNumber}`);
+  }
 }

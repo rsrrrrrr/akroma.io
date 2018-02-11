@@ -8,6 +8,8 @@ import { BlocksPanelComponent } from './components/blocks-panel/blocks-panel.com
 import { TransactionOverviewComponent } from './components/transaction-overview/transaction-overview.component';
 import { TransactionsPanelComponent } from './components/transactions-panel/transactions-panel.component';
 import { ExplorerRoutingModule } from './explorer-routing.module';
+import { BlockExistsGuard } from './guards/block-exists.guard';
+import { BlockDetailsComponent } from './pages/block-details/block-details.component';
 import { OverviewComponent } from './pages/overview/overview.component';
 import { HexToAsciiPipe } from './pipes/hex-to-ascii.pipe';
 import { UnixTimestampToDatePipe } from './pipes/unix-timestamp-to-date.pipe';
@@ -33,12 +35,14 @@ import { reducers } from './state/reducers';
     TransactionsPanelComponent,
     BlockOverviewComponent,
     TransactionOverviewComponent,
+    BlockDetailsComponent,
     HexToAsciiPipe,
     UnixTimestampToDatePipe,
   ],
   providers: [
     BlocksService,
     TransactionsService,
+    BlockExistsGuard,
   ],
 })
 export class ExplorerModule { }

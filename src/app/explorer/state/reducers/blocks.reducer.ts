@@ -1,5 +1,5 @@
 import { Block } from '../../models/block';
-import { Actions, LOAD_BLOCKS, LOAD_BLOCKS_FAIL, LOAD_BLOCKS_SUCCESS } from '../actions/blocks.actions';
+import { Actions, LOAD_BLOCKS, LOAD_BLOCKS_FAIL, LOAD_BLOCKS_SUCCESS, LOAD_BLOCK_SUCCESS } from '../actions/blocks.actions';
 
 interface BlockEntities {
   [number: number]: Block;
@@ -23,6 +23,19 @@ export function reducer(state = initialState, action: Actions): BlocksState {
       return {
         ...state,
         loading: true,
+      };
+    }
+
+    case LOAD_BLOCK_SUCCESS: {
+      const block = action.payload;
+      const updatedEntities = {
+        ...state.entities,
+        [block.number]: block,
+      };
+
+      return {
+        ...state,
+        entities: updatedEntities,
       };
     }
 

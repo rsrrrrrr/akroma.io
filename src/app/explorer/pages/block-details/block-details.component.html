@@ -1,0 +1,133 @@
+<ng-container *ngIf="block$ | async as block">
+  <div class="background"> </div>
+  <div class="container">
+    <div class="row">
+      <div class="col col-xl-10 offset-xl-1">
+        <div class="block-info" style="position: relative;">
+          <div class="icon transparent">
+            <img src="../../../../assets/images/icon-block.svg" alt="Block">
+          </div>
+          <div class="property transparent">
+            Block
+          </div>
+          <div class="value transparent">
+            {{ block.number }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-hash.svg" alt="Hash">
+          </div>
+          <div class="property">
+            Hash
+          </div>
+          <div class="value">
+            {{ block.hash }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-time.svg" alt="Clock">
+          </div>
+          <div class="property">
+            Time
+          </div>
+          <div class="value">
+            {{ block.timestamp | unixTimestampToDate | date:'yyyy-MM-dd HH:mm:ss' }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-parent-hash.svg" alt="Parent Hash">
+          </div>
+          <div class="property">
+            Parent Hash
+          </div>
+          <div class="value">
+            {{ block.parentHash }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-sha3-uncles.svg" alt="SHA3 Uncles">
+          </div>
+          <div class="property">
+            SHA3 Uncles
+          </div>
+          <div class="value">
+            {{ block.sha3Uncles }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-mined-by.svg" alt="Clock">
+          </div>
+          <div class="property">
+            Mined By
+          </div>
+          <div class="value">
+            {{ block.miner }}
+          </div>
+
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-difficulty.svg" alt="Clock">
+          </div>
+          <div class="property">
+            Difficulty
+          </div>
+          <div class="value">
+            {{ block.difficulty }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-total-difficulty.svg" alt="Clock">
+          </div>
+          <div class="property">
+            Total Difficulty
+          </div>
+          <div class="value">
+            {{ block.totalDifficulty }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-gas-limit.svg" alt="Clock">
+          </div>
+          <div class="property">
+            Gas Limit
+          </div>
+          <div class="value">
+            {{ block.gasLimit }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-gas-used.svg" alt="Clock">
+          </div>
+          <div class="property">
+            Gas Used
+          </div>
+          <div class="value">
+            {{ block.gasUsed }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-nonce.svg" alt="Clock">
+          </div>
+          <div class="property">
+            Nonce
+          </div>
+          <div class="value">
+            {{ block.nonce }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-time.svg" alt="Clock">
+          </div>
+          <div class="property">
+            Extra Data
+          </div>
+          <div class="value">
+            {{ block.extraData | hexToAscii }}
+          </div>
+
+          <div class="info-background"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

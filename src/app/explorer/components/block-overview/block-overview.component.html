@@ -1,22 +1,28 @@
 <div class="d-none d-md-block">
   <div class="d-flex">
-    <div class="row-icon">
-      <img src="../../../assets/images/cube.svg" alt="Block" height="46">
-    </div>
+    <a [routerLink]="['block', block.number]">
+      <div class="row-icon">
+        <img src="../../../assets/images/cube.svg" alt="Block" height="46">
+      </div>
+    </a>
 
     <div class="block-details flex-column">
       <div class="top-row">
-        <div class="block-number">
-          {{ block.number }}
-        </div>
+        <a [routerLink]="['block', block.number]">
+          <div class="block-number">
+            {{ block.number }}
+          </div>
+        </a>
         <div class="timestamp">
           {{ block.timestamp | unixTimestampToDate | date:'yyyy-MM-dd HH:mm:ss' }}
         </div>
-        <div class="extra-data">
-          <span class="d-inline-block text-truncate">
-            {{ block.extraData | hexToAscii }}
-          </span>
-        </div>
+        <a [routerLink]="['block', block.number]" class="extra-data-link">
+          <div class="extra-data">
+            <span class="d-inline-block text-truncate">
+              {{ block.extraData | hexToAscii }}
+            </span>
+          </div>
+        </a>
       </div>
       <div class="bottom-row">
         <div class="mined-by">{{ block.miner }}</div>

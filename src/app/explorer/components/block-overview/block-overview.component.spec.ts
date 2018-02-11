@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { HexToAsciiPipe } from '../../pipes/hex-to-ascii.pipe';
 import { UnixTimestampToDatePipe } from '../../pipes/unix-timestamp-to-date.pipe';
@@ -12,6 +13,9 @@ describe('BlockOverviewComponent', () => {
   beforeEach(async(() => {
     TestBed
       .configureTestingModule({
+        imports: [
+          RouterTestingModule,
+        ],
         declarations: [
           BlockOverviewComponent,
           UnixTimestampToDatePipe,

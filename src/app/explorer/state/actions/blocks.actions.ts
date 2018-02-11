@@ -2,9 +2,16 @@ import { Action } from '@ngrx/store';
 
 import { Block } from '../../models/block';
 
+export const LOAD_BLOCK_SUCCESS = '[Explorer] Load Block Success';
 export const LOAD_BLOCKS = '[Explorer] Load Blocks';
 export const LOAD_BLOCKS_FAIL = '[Explorer] Load Blocks Fail';
 export const LOAD_BLOCKS_SUCCESS = '[Explorer] Load Blocks Success';
+
+export class LoadBlockSuccess implements Action {
+  readonly type = LOAD_BLOCK_SUCCESS;
+
+  constructor(public payload: Block) { }
+}
 
 export class LoadBlocks implements Action {
   readonly type = LOAD_BLOCKS;
@@ -23,6 +30,7 @@ export class LoadBlocksSuccess implements Action {
 }
 
 export type Actions =
+  | LoadBlockSuccess
   | LoadBlocks
   | LoadBlocksFail
   | LoadBlocksSuccess;
