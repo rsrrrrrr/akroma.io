@@ -7,11 +7,11 @@ import { HexToAsciiPipe } from '../../pipes/hex-to-ascii.pipe';
 import { UnixTimestampToDatePipe } from '../../pipes/unix-timestamp-to-date.pipe';
 import * as fromExplorer from '../../state/reducers';
 
-import { BlockDetailsComponent } from './block-details.component';
+import { TransactionDetailsComponent } from './transaction-details.component';
 
-describe('BlockDetailsComponent', () => {
-  let component: BlockDetailsComponent;
-  let fixture: ComponentFixture<BlockDetailsComponent>;
+describe('TransactionDetailsComponent', () => {
+  let component: TransactionDetailsComponent;
+  let fixture: ComponentFixture<TransactionDetailsComponent>;
 
   beforeEach(async(() => {
     TestBed
@@ -24,7 +24,7 @@ describe('BlockDetailsComponent', () => {
           }),
         ],
         declarations: [
-          BlockDetailsComponent,
+          TransactionDetailsComponent,
           HexToAsciiPipe,
           UnixTimestampToDatePipe,
         ],
@@ -33,7 +33,7 @@ describe('BlockDetailsComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BlockDetailsComponent);
+    fixture = TestBed.createComponent(TransactionDetailsComponent);
     component = fixture.componentInstance;
   });
 

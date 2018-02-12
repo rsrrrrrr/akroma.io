@@ -2,8 +2,8 @@
   <div class="background"> </div>
   <div class="container">
     <div class="row">
-      <div class="col col-xl-10 offset-xl-1">
-        <div class="block-info" style="position: relative;">
+      <div class="col">
+        <div class="info">
           <div class="icon transparent">
             <img src="../../../../assets/images/icon-block.svg" alt="Block">
           </div>
@@ -41,7 +41,13 @@
             Parent Hash
           </div>
           <div class="value">
-            {{ block.parentHash }}
+            <a [routerLink]="['/explorer', 'block', block.parentHash]">
+              {{ block.parentHash }}
+              <span class="arrow fa-layers fa-fw">
+                <i class="fas fa-circle" style="color: #5B5B5B"></i>
+                <i class="fa-inverse fas fa-arrow-circle-right" style="color: #fff;"></i>
+              </span>
+            </a>
           </div>
 
           <div class="icon">
@@ -55,7 +61,7 @@
           </div>
 
           <div class="icon">
-            <img src="../../../../assets/images/icon-mined-by.svg" alt="Clock">
+            <img src="../../../../assets/images/icon-mined-by.svg" alt="Mined By">
           </div>
           <div class="property">
             Mined By
@@ -64,29 +70,28 @@
             {{ block.miner }}
           </div>
 
-
           <div class="icon">
-            <img src="../../../../assets/images/icon-difficulty.svg" alt="Clock">
+            <img src="../../../../assets/images/icon-difficulty.svg" alt="Difficulty">
           </div>
           <div class="property">
             Difficulty
           </div>
           <div class="value">
-            {{ block.difficulty }}
+            {{ block.difficulty | number }}
           </div>
 
           <div class="icon">
-            <img src="../../../../assets/images/icon-total-difficulty.svg" alt="Clock">
+            <img src="../../../../assets/images/icon-total-difficulty.svg" alt="Total Difficulty">
           </div>
           <div class="property">
             Total Difficulty
           </div>
           <div class="value">
-            {{ block.totalDifficulty }}
+            {{ block.totalDifficulty | number }}
           </div>
 
           <div class="icon">
-            <img src="../../../../assets/images/icon-gas-limit.svg" alt="Clock">
+            <img src="../../../../assets/images/icon-gas-limit.svg" alt="Gas Limit">
           </div>
           <div class="property">
             Gas Limit
@@ -96,7 +101,7 @@
           </div>
 
           <div class="icon">
-            <img src="../../../../assets/images/icon-gas-used.svg" alt="Clock">
+            <img src="../../../../assets/images/icon-gas-used.svg" alt="Gas Used">
           </div>
           <div class="property">
             Gas Used
@@ -106,7 +111,7 @@
           </div>
 
           <div class="icon">
-            <img src="../../../../assets/images/icon-nonce.svg" alt="Clock">
+            <img src="../../../../assets/images/icon-nonce.svg" alt="Nonce">
           </div>
           <div class="property">
             Nonce
@@ -116,7 +121,7 @@
           </div>
 
           <div class="icon">
-            <img src="../../../../assets/images/icon-time.svg" alt="Clock">
+            <img src="../../../../assets/images/icon-input-data.svg" alt="Extra Data">
           </div>
           <div class="property">
             Extra Data

@@ -72,8 +72,10 @@ a {
   }
 
   &.transparent {
+    font-size: 1.125rem;
     color: #fff;
   }
+
 }
 
 .value {
@@ -114,4 +116,8 @@ a {
   background-color: #cdcdcd;
   height: 100%;
   width: 100%;
+}
+
+.arrow {
+  padding-left: 5px;
 }

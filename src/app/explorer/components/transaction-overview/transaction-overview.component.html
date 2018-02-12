@@ -2,37 +2,47 @@
   <div class="row">
     <div class="col">
       <div class="row-grid">
-        <div class="row-icon">
-          <img src="../../../assets/images/arrows.svg" alt="Transaction" height="46">
-        </div>
-        <div class="row-inner-grid-top">
-          <div class="hash">
-            <span class="text-truncate">
-              {{ transaction.hash }}
-            </span>
+        <a [routerLink]="['transaction', transaction.hash]" class="row-icon-link">
+          <div class="row-icon">
+            <img src="../../../assets/images/arrows.svg" alt="Transaction" height="46">
           </div>
+        </a>
+        <div class="row-inner-grid-top">
+          <a [routerLink]="['transaction', transaction.hash]">
+            <div class="hash">
+              <span class="text-truncate">
+                {{ transaction.hash }}
+              </span>
+            </div>
+          </a>
           <div class="timestamp">
             {{ transaction.timestamp | unixTimestampToDate | date:'yyyy-MM-dd HH:mm:ss' }}
           </div>
-          <div class="value">
-            <span class="amount">
-              {{ transaction.value }}
-            </span>
-            AKA
-          </div>
+          <a [routerLink]="['transaction', transaction.hash]">
+            <div class="value">
+              <span class="amount">
+                {{ transaction.value }}
+              </span>
+              AKA
+            </div>
+          </a>
         </div>
         <div class="row-inner-grid-bottom-wrapper">
           <div class="row-inner-grid-bottom">
-            <div class="from">
-              <span class="text-truncate">
-                {{ transaction.from }}
-              </span>
-            </div>
-            <div class="to">
-              <span class="text-truncate">
-                {{ transaction.to }}
-              </span>
-            </div>
+            <a [routerLink]="['address', transaction.from]">
+              <div class="from">
+                <span class="text-truncate">
+                  {{ transaction.from }}
+                </span>
+              </div>
+            </a>
+            <a [routerLink]="['address', transaction.to]">
+              <div class="to">
+                <span class="text-truncate">
+                  {{ transaction.to }}
+                </span>
+              </div>
+            </a>
           </div>
           <span class="arrow fa-layers fa-fw">
             <i class="fas fa-circle" style="color: #5B5B5B"></i>
@@ -48,37 +58,47 @@
   <div class="row">
     <div class="col">
       <div class="row-grid">
-        <div class="row-icon">
-          <img src="../../../assets/images/arrows.svg" alt="Transaction" height="34.5">
-        </div>
-        <div class="hash">
-          <span class="text-truncate">
-            {{ transaction.hash }}
-          </span>
-        </div>
+        <a [routerLink]="['transaction', transaction.hash]" class="row-icon-link">
+          <div class="row-icon">
+            <img src="../../../assets/images/arrows.svg" alt="Transaction" height="34.5">
+          </div>
+        </a>
+        <a [routerLink]="['transaction', transaction.hash]">
+          <div class="hash">
+            <span class="text-truncate">
+              {{ transaction.hash }}
+            </span>
+          </div>
+        </a>
 
         <div class="timestamp">
           {{ transaction.timestamp | unixTimestampToDate | date:'yyyy-MM-dd HH:mm:ss' }}
         </div>
-        <div class="value">
-          <span class="amount">
-            {{ transaction.value }}
-          </span>
-          AKA
-        </div>
+        <a [routerLink]="['transaction', transaction.hash]" class="value-link">
+          <div class="value">
+            <span class="amount">
+              {{ transaction.value }}
+            </span>
+            AKA
+          </div>
+        </a>
 
         <div class="row-inner-grid-bottom-wrapper">
           <div class="row-inner-grid-bottom">
-            <div class="from">
-              <span class="text-truncate">
-                {{ transaction.from }}
-              </span>
-            </div>
-            <div class="to">
-              <span class="text-truncate">
-                {{ transaction.to }}
-              </span>
-            </div>
+            <a [routerLink]="['address', transaction.from]">
+              <div class="from">
+                <span class="text-truncate">
+                  {{ transaction.from }}
+                </span>
+              </div>
+            </a>
+            <a [routerLink]="['address', transaction.to]">
+              <div class="to">
+                <span class="text-truncate">
+                  {{ transaction.to }}
+                </span>
+              </div>
+            </a>
           </div>
           <span class="arrow fa-layers fa-fw">
             <i class="fas fa-circle" style="color: #5B5B5B"></i>

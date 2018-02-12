@@ -1,5 +1,7 @@
 import { createSelector } from '@ngrx/store';
 
+import * as fromRoot from '../../../core/state/reducers';
+import { Transaction } from '../../models/transaction';
 import { ExplorerState, getExplorerState } from '../reducers';
 import * as fromTransactions from '../reducers/transactions.reducer';
 
@@ -33,4 +35,10 @@ export const getLast10Transactions = createSelector(
       return 0;
     })
     .slice(0, 10),
+);
+
+export const getSelectedTransaction = createSelector(
+  getTransactionsEntities,
+  fromRoot.getRouterState,
+  (entities, router): Transaction => router.state && entities[router.state.params.transactionHash],
 );

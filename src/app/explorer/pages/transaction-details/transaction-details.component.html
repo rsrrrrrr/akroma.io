@@ -1,0 +1,146 @@
+<ng-container *ngIf="transaction$ | async as transaction">
+  <div class="background"> </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="info">
+          <div class="icon transparent">
+            <img src="../../../../assets/images/icon-hash.svg" alt="Hash">
+          </div>
+          <div class="property transparent">
+            Hash
+          </div>
+          <div class="value transparent">
+            {{ transaction.hash }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-time.svg" alt="Clock">
+          </div>
+          <div class="property">
+            Time
+          </div>
+          <div class="value">
+            {{ transaction.timestamp | unixTimestampToDate | date:'yyyy-MM-dd HH:mm:ss' }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-from.svg" alt="From">
+          </div>
+          <div class="property">
+            From
+          </div>
+          <div class="value">
+            <a [routerLink]="['/explorer', 'address', transaction.from]">
+              {{ transaction.from }}
+              <span class="arrow fa-layers fa-fw">
+                <i class="fas fa-circle" style="color: #5B5B5B"></i>
+                <i class="fa-inverse fas fa-arrow-circle-right" style="color: #fff;"></i>
+              </span>
+            </a>
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-to.svg" alt="To">
+          </div>
+          <div class="property">
+            To
+          </div>
+          <div class="value">
+            <a [routerLink]="['/explorer', 'address', transaction.to]">
+              {{ transaction.to }}
+              <span class="arrow fa-layers fa-fw">
+                <i class="fas fa-circle" style="color: #5B5B5B"></i>
+                <i class="fa-inverse fas fa-arrow-circle-right" style="color: #fff;"></i>
+              </span>
+            </a>
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-value.svg" alt="Value">
+          </div>
+          <div class="property">
+            Value
+          </div>
+          <div class="value">
+            {{ transaction.value }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-block.svg" alt="Block">
+          </div>
+          <div class="property ">
+            Block
+          </div>
+          <div class="value">
+            <a [routerLink]="['/explorer', 'block', transaction.blockNumber]">
+              {{ transaction.blockNumber }}
+              <span class="arrow fa-layers fa-fw">
+                <i class="fas fa-circle" style="color: #5B5B5B"></i>
+                <i class="fa-inverse fas fa-arrow-circle-right" style="color: #fff;"></i>
+              </span>
+            </a>
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-hash.svg" alt="Block Hash">
+          </div>
+          <div class="property">
+            Block Hash
+          </div>
+          <div class="value">
+            <a [routerLink]="['/explorer', 'block', transaction.blockHash]">
+              {{ transaction.blockHash }}
+              <span class="arrow fa-layers fa-fw">
+                <i class="fas fa-circle" style="color: #5B5B5B"></i>
+                <i class="fa-inverse fas fa-arrow-circle-right" style="color: #fff;"></i>
+              </span>
+            </a>
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-gas-provided.svg" alt="Gas Provided">
+          </div>
+          <div class="property">
+            Gas Provided
+          </div>
+          <div class="value">
+            {{ transaction.gas | number }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-gas-price.svg" alt="Gas Price">
+          </div>
+          <div class="property">
+            Gas Price
+          </div>
+          <div class="value">
+            {{ transaction.gasPrice | number }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-nonce.svg" alt="Nonce">
+          </div>
+          <div class="property">
+            Nonce
+          </div>
+          <div class="value">
+            {{ transaction.nonce }}
+          </div>
+
+          <div class="icon">
+            <img src="../../../../assets/images/icon-input-data.svg" alt="Input Data">
+          </div>
+          <div class="property">
+            Input Data
+          </div>
+          <div class="value">
+            {{ transaction.input | hexToAscii }}
+          </div>
+
+          <div class="info-background"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

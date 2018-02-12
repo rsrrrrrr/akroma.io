@@ -16,4 +16,9 @@ export class TransactionsService {
     return this.http
       .get<Transaction[]>(`${environment.apiUrl}/transactions`);
   }
+
+  getTransaction(transactionHash: string): Observable<Transaction> {
+    return this.http
+      .get<Transaction>(`${environment.apiUrl}/transactions/${transactionHash}`);
+  }
 }

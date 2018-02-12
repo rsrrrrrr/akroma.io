@@ -48,7 +48,7 @@ export class BlockExistsGuard implements CanActivate {
       .getBlock(blockId)
       .pipe(
         map(blockEntity => new LoadBlockSuccess(blockEntity)),
-        tap((action: LoadBlockSuccess) => this.store.dispatch(action)),
+        tap((action) => this.store.dispatch(action)),
         map(block => !!block),
         catchError(() => {
           this.router.navigate(['/explorer']);

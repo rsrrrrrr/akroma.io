@@ -24,9 +24,11 @@
           </div>
         </a>
       </div>
-      <div class="bottom-row">
-        <div class="mined-by">{{ block.miner }}</div>
-      </div>
+      <a [routerLink]="['address', block.miner]">
+        <div class="bottom-row">
+          <div class="mined-by">{{ block.miner }}</div>
+        </div>
+      </a>
     </div>
   </div>
 </div>
@@ -35,12 +37,16 @@
   <div class="row">
     <div class="col">
       <div class="d-flex">
-        <div class="row-icon">
-          <img src="../../../assets/images/cube.svg" alt="Block" height="46">
-        </div>
-        <div class="block-number">
-          {{ block.number }}
-        </div>
+        <a [routerLink]="['block', block.number]">
+          <div class="row-icon">
+            <img src="../../../assets/images/cube.svg" alt="Block" height="46">
+          </div>
+        </a>
+        <a [routerLink]="['block', block.number]" class="block-number-link">
+          <div class="block-number">
+            {{ block.number }}
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -53,16 +59,20 @@
   </div>
   <div class="row">
     <div class="col">
-      <div class="mined-by text-truncate">
-        {{ block.miner }}
-      </div>
+      <a [routerLink]="['address', block.miner]">
+        <div class="mined-by text-truncate">
+          {{ block.miner }}
+        </div>
+      </a>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <div class="extra-data text-truncate">
-        {{ block.extraData | hexToAscii }}
-      </div>
+      <a [routerLink]="['block', block.number]" class="extra-data-link">
+        <div class="extra-data text-truncate">
+          {{ block.extraData | hexToAscii }}
+        </div>
+      </a>
     </div>
   </div>
 </div>

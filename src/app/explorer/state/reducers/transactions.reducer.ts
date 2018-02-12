@@ -1,5 +1,11 @@
 import { Transaction } from '../../models/transaction';
-import { Actions, LOAD_TRANSACTIONS, LOAD_TRANSACTIONS_FAIL, LOAD_TRANSACTIONS_SUCCESS } from '../actions/transactions.actions';
+import {
+  Actions,
+  LOAD_TRANSACTIONS,
+  LOAD_TRANSACTIONS_FAIL,
+  LOAD_TRANSACTIONS_SUCCESS,
+  LOAD_TRANSACTION_SUCCESS,
+} from '../actions/transactions.actions';
 
 interface TransactionEntities {
   [hash: string]: Transaction;
@@ -23,6 +29,19 @@ export function reducer(state = initialState, action: Actions): TransactionsStat
       return {
         ...state,
         loading: true,
+      };
+    }
+
+    case LOAD_TRANSACTION_SUCCESS: {
+      const transaction = action.payload;
+      const updatedEntities = {
+        ...state.entities,
+        [transaction.hash]: transaction,
+      };
+
+      return {
+        ...state,
+        entities: updatedEntities,
       };
     }
 
