@@ -1,0 +1,8 @@
+<form [formGroup]="lookupForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="lookup-wrapper">
+    <input formControlName="lookup" type="text" class="form-control" placeholder="Address | Transaction | Block">
+    <button type="submit" class="btn">
+      <img src="../../../../assets/images/arrow-right.svg" alt="Right Arrow" width="27">
+    </button>
+  </div>
+</form>
