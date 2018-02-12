@@ -16,6 +16,8 @@ a:hover {
   text-decoration: none;
 }
 
+
+
 .section-wrapper {
   background-size: cover;
 
@@ -62,7 +64,15 @@ a:hover {
     .content {
       font-weight: 400;
       line-height: 1.6rem;
+
+      a {
+        color: #fff;
+        font-weight: 600;
+        text-decoration: underline;
+      }
     }
+
+  
 
     background: url('../../../assets/images/akroma-bg-shape.svg'), linear-gradient(225deg, #FFA600 0%, #E25D00 100%);
     background-position: 10% 50%;
