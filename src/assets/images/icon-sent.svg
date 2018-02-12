@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="57px" viewBox="0 0 41 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-2.0%" y="-13.8%" width="104.0%" height="147.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="akroma-d-address" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-150.000000, -329.000000)">
+        <g id="transaction" filter="url(#filter-1)" transform="translate(130.000000, 308.000000)">
+            <g id="Group" transform="translate(29.000000, 22.000000)">
+                <path d="M0.0886757865,10.0481734 L11.0886758,0.0481734401 C10.9310626,0.0494333695 12.1367546,-0.0608440399 12.0886758,0.0481734401 L23.0886758,10.0481734 C23.1804567,10.2500937 23.2300886,11.0412143 23.0886758,11.0481734 C22.3173459,11.9605923 21.5026565,11.9821683 21.0886758,12.0481734 L13.0886758,4.04817344 L13.0886758,30.0481734 C12.7940746,30.5123691 12.2529658,31.0481734 11.0886758,31.0481734 C10.9153257,31.0481734 10.3730064,30.5123691 10.0886758,30.0481734 L10.0886758,4.04817344 L2.08867579,12.0481734 C1.665635,11.9821683 0.847313985,11.9797709 0.0886757865,11.0481734 C-0.0509022819,10.9920689 -0.00611252193,10.2560871 0.0886757865,10.0481734 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                <path d="M5,39 C4.44771525,39 4,38.5522847 4,38 C4,37.4477153 4.44771525,37 5,37 L18.9191762,37 C19.4714609,37 19.9191762,37.4477153 19.9191762,38 C19.9191762,38.5522847 19.4714609,39 18.9191762,39 L5,39 Z" id="Path-2" fill-opacity="0.129999995" fill="#000000" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,90 @@
+<ng-container *ngIf="address$ | async as address">
+  <div class="background">
+    <div class="container">
+      <div class="row">
+        <div class="col mb-3">
+          <div class="address">
+            {{ address.hash }}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="info d-flex align-items-baseline px-2">
+            {{ address.balance }}
+          </div>
+          <div class="py-1 px-2 text-uppercase type">
+            Akroma Balance
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="info d-flex align-items-baseline px-2">
+            {{ address.mined }}
+          </div>
+          <div class="py-1 px-2 text-uppercase type">
+            Blocks Mined
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="info d-flex align-items-baseline px-2">
+            {{ address.transactionsInitiatedCount }}
+          </div>
+          <div class="py-1 px-2 text-uppercase type">
+            Transactions
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container transactions">
+    <div class="row">
+      <div class="col">
+        <div class="transaction-header">
+          Transactions
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div *ngFor="let transaction of address.transactions">
+          <div class="transaction-grid">
+            <div class="transaction-icon">
+              <img *ngIf="transaction.from === address.hash; else receivedIcon" src="../../../../assets/images/icon-sent.svg" alt="Sent">
+              <ng-template #receivedIcon>
+                <img src="../../../../assets/images/icon-received.svg" alt="Received">
+              </ng-template>
+            </div>
+            <a [routerLink]="['/explorer', 'transaction', transaction.hash]" class="transaction-hash-link">
+              <div class="transaction-hash">
+                <span class="text-truncate">
+                  {{ transaction.hash }}
+                </span>
+              </div>
+            </a>
+            <ng-template *ngIf="transaction.from === address.hash; then sentAction; else receivedAction"></ng-template>
+            <ng-template #sentAction>
+              <a [routerLink]="['/explorer', 'address', transaction.to]" class="transaction-action-link">
+                <div class="transaction-action">
+                  <span class="text-truncate"> Sent to {{ transaction.to }}</span>
+                </div>
+              </a>
+            </ng-template>
+            <ng-template #receivedAction>
+              <a [routerLink]="['/explorer', 'address', transaction.from]" class="transaction-action-link">
+                <div class="transaction-action">
+                  <span class="text-truncate">Received to {{ transaction.to }}</span>
+                </div>
+              </a>
+            </ng-template>
+            <div class="transaction-value">
+              {{ transaction.value | number:'1.0-5' }} AKA
+            </div>
+            <div class="transaction-timestamp">
+              {{ transaction.timestamp | unixTimestampToDate | date:'yyyy-MM-dd HH:mm:ss' }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
