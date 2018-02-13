@@ -47,7 +47,7 @@ a {
 }
 
 .transparent {
-  background-color: rgba(255,255,255,0.3) !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 .icon {
@@ -71,6 +71,7 @@ a {
     font-size: 1.125rem;
   }
 
+
   &.transparent {
     color: #fff;
   }
@@ -91,6 +92,7 @@ a {
     font-size: 1.125rem;
   }
 
+
   &.transparent {
     font-weight: 600;
     font-size: 1.125rem;
@@ -99,6 +101,7 @@ a {
   &:nth-of-type(even) {
     background-color: #4a4a4a;
   }
+
   &:nth-of-type(odd) {
     background-color: #5B5B5B;
   }

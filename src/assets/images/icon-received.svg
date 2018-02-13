@@ -1,41 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="42px" height="60px" viewBox="0 0 42 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 2</title>
+<svg width="25px" height="39px" viewBox="0 0 25 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>address-icon-received</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <filter x="-2.0%" y="-13.8%" width="104.0%" height="147.5%" filterUnits="objectBoundingBox" id="filter-1">
-            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
-            <feMerge>
-                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-            </feMerge>
-        </filter>
-        <path d="M23.0884166,21 L12.0884166,31 C12.2460298,30.9987401 11.0403379,31.1090175 11.0884166,31 L0.088416625,21 C-0.0033643109,20.7980797 -0.0529962071,20.0069591 0.088416625,20 C0.859746469,19.0875812 1.67443589,19.0660052 2.08841663,19 L10.0884166,27 L10.0884166,1 C10.3830179,0.53580437 10.9241266,0 12.0884166,0 C12.2617667,0 12.804086,0.53580437 13.0884166,1 L13.0884166,27 L21.0884166,19 C21.5114574,19.0660052 22.3297784,19.0684025 23.0884166,20 C23.2279947,20.0561045 23.1832049,20.7920864 23.0884166,21 Z" id="path-2"></path>
-        <filter x="-2.2%" y="-4.8%" width="104.3%" height="106.4%" filterUnits="objectBoundingBox" id="filter-3">
+        <path d="M24,22 L13,32 C13.1512377,31.9318622 11.9572497,32.0419017 12,32 L1,22 C1.02075174,21.7532091 0.971601638,20.9637954 1,21 C1.87548408,20.0464009 2.68226508,20.0248714 3,20 L11,28 L11,2 C11.3063105,1.53464841 11.8421665,1 13,1 C13.1668218,1 13.7038767,1.53464841 14,2 L14,28 L22,20 C22.3267233,20.0248714 23.1371007,20.0272636 24,21 C24.0265977,21.0128347 23.9822427,21.7472287 24,22 Z" id="path-1"></path>
+        <filter x="-2.2%" y="-4.8%" width="104.4%" height="106.5%" filterUnits="objectBoundingBox" id="filter-2">
             <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
         </filter>
-        <path d="M5,39 C4.44771525,39 4,38.5522847 4,38 C4,37.4477153 4.44771525,37 5,37 L18.9191762,37 C19.4714609,37 19.9191762,37.4477153 19.9191762,38 C19.9191762,38.5522847 19.4714609,39 18.9191762,39 L5,39 Z" id="path-4"></path>
-        <filter x="-3.1%" y="-25.0%" width="106.3%" height="200.0%" filterUnits="objectBoundingBox" id="filter-5">
+        <path d="M5,38 C4.44998836,38 4,37.5522847 4,37 C4,36.4477153 4.44998836,36 5,36 L20,36 C20.5500116,36 21,36.4477153 21,37 C21,37.5522847 20.5500116,38 20,38 L5,38 Z" id="path-3"></path>
+        <filter x="-2.9%" y="-25.0%" width="105.9%" height="200.0%" filterUnits="objectBoundingBox" id="filter-4">
             <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feComposite in="shadowOffsetOuter1" in2="SourceAlpha" operator="out" result="shadowOffsetOuter1"></feComposite>
             <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.2 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
         </filter>
     </defs>
-    <g id="akroma-d-address" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-150.000000, -428.000000)">
-        <g id="transaction" filter="url(#filter-1)" transform="translate(130.000000, 408.000000)">
-            <g id="Group-2" transform="translate(29.000000, 22.000000)">
-                <g id="Combined-Shape">
-                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
-                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
-                </g>
-                <g id="Path-2" fill-rule="nonzero">
-                    <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
-                    <use fill-opacity="0.129999995" fill="#000000" fill-rule="evenodd" xlink:href="#path-4"></use>
-                </g>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="address-icon-received">
+            <g id="arrow">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="shadow" fill-rule="nonzero">
+                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                <use fill-opacity="0.129999995" fill="#000000" fill-rule="evenodd" xlink:href="#path-3"></use>
             </g>
         </g>
     </g>

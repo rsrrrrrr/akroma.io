@@ -24,6 +24,7 @@ a:hover {
     min-height: 415px;
   }
 
+
   @include media-breakpoint-up(lg) {
     clip-path: $angle-bottom;
   }
@@ -87,10 +88,10 @@ a:hover {
     margin-top: -170px;
   }
 
+
   @include media-breakpoint-up(md) {
     margin-top: -180px;
   }
-
 }
 
 .transaction-grid {
@@ -128,7 +129,6 @@ a:hover {
     grid-column-start: 2;
     grid-column-end: span 3;
   }
-
 }
 
 .transaction-hash {
@@ -143,25 +143,29 @@ a:hover {
   transition: background-color 0.15s ease-in-out;
 
   &:hover {
-    background-color: rgba(0,0,0,0.10);
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
-  >span {
+  > span {
     @include media-breakpoint-only(xs) {
       max-width: 210px;
     }
+
 
     @include media-breakpoint-only(sm) {
       max-width: 425px;
     }
 
+
     @include media-breakpoint-only(md) {
       max-width: 609px;
     }
 
+
     @include media-breakpoint-only(lg) {
       max-width: 849px;
     }
+
 
     @include media-breakpoint-only(xl) {
       max-width: 1029px;
@@ -186,18 +190,21 @@ a:hover {
   align-items: center;
   padding: 3px 10px;
 
-  >span {
+  > span {
     @include media-breakpoint-only(xs) {
       max-width: 265px;
     }
+
 
     @include media-breakpoint-up(md) {
       max-width: 222px;
     }
 
+
     @include media-breakpoint-up(lg) {
       max-width: 462px;
     }
+
 
     @include media-breakpoint-up(xl) {
       max-width: 100%;
