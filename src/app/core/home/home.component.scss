@@ -72,7 +72,6 @@ a:hover {
       }
     }
 
-  
 
     background: url('../../../assets/images/akroma-bg-shape.svg'), linear-gradient(225deg, #FFA600 0%, #E25D00 100%);
     background-position: 10% 50%;
@@ -81,6 +80,23 @@ a:hover {
     color: #fff;
     margin-top: -50px;
     text-align: center;
+  }
+
+  &.pools {
+    .title {
+      margin-bottom: 2rem;
+    }
+
+    .content {
+      font-weight: 400;
+      line-height: 1.6rem;
+
+      a {
+        color: #fff;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+    } 
   }
 
   &.oracles {
@@ -130,6 +146,31 @@ a:hover {
     }
   }
 
+
+  
+  &.blog {
+    background-image: linear-gradient(225deg, #930077 0%, #aa0087 100%);
+    color: #fff;
+    clip-path: $angle-top-and-bottom;
+
+    .table-sm {
+      font-size: 0.875rem;
+
+      td {
+        padding: 0.75rem 0;
+        border-top: 0;
+      }
+    }
+
+    .text {
+      font-size: 0.875rem;
+    }
+
+    .font-white {
+      color: #fff;
+    }
+  }
+
   &.team, &.governance, &.masternodes {
     h1 {
       color: #4a4a4a;
@@ -156,21 +197,21 @@ a:hover {
       font-size: 1rem;
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-down(md) {
       .card-title {
-        font-size: 1.6rem;
+        font-size: 0.8rem;
       }
       .card-text {
-        font-size: 1.3rem;
+        font-size: 0.8rem;
       }
     }
 
     @include media-breakpoint-down(sm) {
       .card-title {
-        font-size: 2rem;
+        font-size: 1rem;
       }
       .card-text {
-        font-size: 1.5rem;
+        font-size: 1.0rem;
       }
     }
   }
